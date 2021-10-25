@@ -7,6 +7,7 @@ body{
 }
 
 .controls button{
-  border-radius: 20px;
+  border-radius: 5px;
   font-family: sans-serif;
+  text-decoration: none;
 }
