@@ -1,20 +1,18 @@
 <!DOCTYPE html>
+<html lang="en">
 <head>
-   <meta charset="UTF-8">
-   <title>Web Recorder</title>
-   <link rel="stylesheet" href="./css/styles.css">
-   <script src="https://kit.fontawesome.com/ecd59447e7.js" crossorigin="anonymous"></script>
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <script src="./js/screen.js"></script>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Web Recorder</title>
+	<script src="./js/screen.js" defer></script>
 </head>
 <body align="center">
-<div class="controls">
-   <h2>Screen Capture</h2>
-   <p>
-   <button id="start"><i class="fas fa-play"></i>Start</button>
-   <button id="stop"><i class="fas fa-stop"></i>Stop</button>
-   </p>
-   <video id="video" width="800" height="680" autoplay></video>
-</div>
+	<h2>Screen Capture</h2>
+	<p>
+	<button id="start">Start Sharing</button>
+   <button id="stop">Stop Sharing</button>
+	</p>
+   <video id="video" style="border: solid 2px #000; width: 80%;" autoplay></video>
 </body>
 </html>
