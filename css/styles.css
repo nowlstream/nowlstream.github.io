@@ -1,3 +1,14 @@
 .controls{
   text-align: center;
 }
+
+.controls button{
+  border-radius: 5px;
+  border: none;
+  padding: 0;
+  background: none;
+}
+
+.controls i{
+  margin-right: 2px;
+}
