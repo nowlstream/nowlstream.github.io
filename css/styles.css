@@ -5,3 +5,8 @@ body{
 .controls{
   text-align: center;
 }
+
+.controls button{
+  border-radius: 20px;
+  font-family: sans-serif;
+}
