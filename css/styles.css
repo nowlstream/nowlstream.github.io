@@ -1,11 +1,10 @@
-.controls{
-  text-align: center;
-}
-
-.controls button{
-  border-radius: 5px;
+body{
+  background: ;
 }
 
 video{
-  margin: 20px;
+  margin: 10px;
+  border: solid 2px #000;
+  border-radius: 5px;
+  width: 75%;
 }
