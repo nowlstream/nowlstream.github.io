@@ -1,30 +1,42 @@
-let start = document.getElementById('start'),
-    stop  = document.getElementById('stop'),
+////////// Recorder //////////
+//get video element
+const video = document.getElementById("video");
+
+//configure buttons
+let start = document.getElementById('record'),
+    stop  = document.getElementById('stoprec'),
     mediaRecorder;
 
+//configure initial state of capture
+let capture = null;
+
+//buttons
 start.addEventListener('click', async function(){
     let stream = await recordScreen();
     let mimeType = 'video/webm';
     mediaRecorder = createRecorder(stream, mimeType);
-  let node = document.createElement("p");
-    node.textContent = "Started recording";
-    document.body.appendChild(node);
 })
 
 stop.addEventListener('click', function(){
     mediaRecorder.stop();
-    let node = document.createElement("p");
-    node.textContent = "Stopped recording";
-    document.body.appendChild(node);
 })
 
+//capture the screen, rec and show on the screen
 async function recordScreen() {
-    return await navigator.mediaDevices.getDisplayMedia({
+    capture = await navigator.mediaDevices.getDisplayMedia({
         audio: true, 
         video: { mediaSource: "screen"}
     });
+
+    capture
+        .getVideoTracks()[0]
+    
+    video.srcObject = capture;
+
+    return capture;
 }
 
+//recorder
 function createRecorder (stream, mimeType) {
   // the stream data is stored in this array
   let recordedChunks = []; 
@@ -44,6 +56,7 @@ function createRecorder (stream, mimeType) {
   return mediaRecorder;
 }
 
+//save file
 function saveFile(recordedChunks){
 
    const blob = new Blob(recordedChunks, {
@@ -52,7 +65,7 @@ function saveFile(recordedChunks){
     let filename = window.prompt('Enter file name'),
         downloadLink = document.createElement('a');
     downloadLink.href = URL.createObjectURL(blob);
-    downloadLink.download = `${filename}.webm`;
+    downloadLink.download = `${filename}.mp4`;
 
     document.body.appendChild(downloadLink);
     downloadLink.click();
