@@ -1,10 +1,28 @@
 body{
-  background: ;
+  background: #181818;
 }
 
 video{
   margin: 10px;
-  border: solid 2px #000;
+  border: solid 3px #000;
   border-radius: 5px;
-  width: 75%;
+  width: 80%;
+  height: 40%;
+  background: #383838;
+}
+
+.controls button{
+  position: block;
+  margin-left: 8px;
+  text-align: center;
+  border: solid 3px black;
+  border-radius: 7px;
+  width: 140px;
+  height: 50px;
+  background: #383838;
+  color: white;
+}
+
+.controls button:hover{
+  background: #181818;
 }
