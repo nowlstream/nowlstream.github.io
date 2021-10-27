@@ -7,7 +7,7 @@
 ### 🎥 Rec
 - rec your entire screen, browser tab or even other window...
 
-### 📷 Stream
+### 📷 Stream [Canceled]
 - Stream your screen or window to that 🔴 red plataform
 
 ## Made With ❤️ And:
